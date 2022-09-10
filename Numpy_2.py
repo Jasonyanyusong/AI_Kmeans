@@ -23,19 +23,19 @@ plt.scatter(gauss_x5, gauss_y5, color='pink')
 
 gauss_x6 = np.random.normal(loc=0.0, scale=1.0, size=200)
 gauss_y6 = np.random.normal(loc=5.0, scale=1.0, size=200)
-plt.scatter(gauss_x5, gauss_y5, color='purple')
+plt.scatter(gauss_x6, gauss_y6, color='purple')
 
 gauss_x7 = np.random.normal(loc=5.0, scale=1.0, size=200)
 gauss_y7 = np.random.normal(loc=0.0, scale=1.0, size=200)
-plt.scatter(gauss_x5, gauss_y5, color='yellow')
+plt.scatter(gauss_x7, gauss_y7, color='yellow')
 
 gauss_x8 = np.random.normal(loc=5.0, scale=1.0, size=200)
 gauss_y8 = np.random.normal(loc=10.0, scale=1.0, size=200)
-plt.scatter(gauss_x5, gauss_y5, color='brown')
+plt.scatter(gauss_x8, gauss_y8, color='brown')
 
 gauss_x9 = np.random.normal(loc=10.0, scale=1.0, size=200)
 gauss_y9 = np.random.normal(loc=5.0, scale=1.0, size=200)
-plt.scatter(gauss_x5, gauss_y5, color='black')
+plt.scatter(gauss_x9, gauss_y9, color='black')
 
 plt.show()
 
