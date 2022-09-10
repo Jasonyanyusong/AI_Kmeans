@@ -32,5 +32,7 @@ gauss_yall = np.append(gauss_y1, gauss_y2)
 gauss_yall = np.append(gauss_yall, gauss_y3)
 gauss_yall = np.append(gauss_yall, gauss_y4)
 gauss_yall = np.append(gauss_yall, gauss_y5)
+
 plt.scatter(gauss_xall, gauss_yall, color='black')
+
 plt.show()
