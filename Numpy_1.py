@@ -20,6 +20,7 @@ plt.scatter(gauss_x4, gauss_y4, color='orange')
 gauss_x5 = np.random.normal(loc=10.0, scale=1.0, size=200)
 gauss_y5 = np.random.normal(loc=0.0, scale=1.0, size=200)
 plt.scatter(gauss_x5, gauss_y5, color='pink')
+
 plt.show()
 
 gauss_xall = np.append(gauss_x1, gauss_x2)
