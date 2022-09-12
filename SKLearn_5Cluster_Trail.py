@@ -39,5 +39,9 @@ gauss_yall = np.append(gauss_yall, gauss_y5)
 plt.scatter(gauss_xall, gauss_yall, color='black')
 plt.show()
 
+print(gauss_xall)
+print("")
+print(gauss_yall)
+
 from sklearn.neighbors import NearestNeighbors
 from sklearn.neighbors import KNeighborsClassifier
