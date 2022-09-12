@@ -27,7 +27,7 @@ gauss_x5 = np.random.normal(loc=10.0, scale=1.0, size=200)
 gauss_y5 = np.random.normal(loc=0.0, scale=1.0, size=200)
 plt.scatter(gauss_x5, gauss_y5, color='pink')
 
-# plt.show()
+plt.show()
 
 # GENERATE UNCOLORED PLOT
 gauss_xall = np.append(gauss_x1, gauss_x2)
@@ -40,7 +40,7 @@ gauss_yall = np.append(gauss_yall, gauss_y4)
 gauss_yall = np.append(gauss_yall, gauss_y5)
 plt.scatter(gauss_xall, gauss_yall, color='black')
 
-# plt.show()
+plt.show()
 
 print("GAUSS_XALL")
 print(gauss_xall)
@@ -54,46 +54,83 @@ print(len(gauss_yall))
 
 gauss_all = []
 for i in range(0, len(gauss_xall), 1):
-    # gauss_all += np.array([gauss_xall[i],gauss_yall[i]])
     print(i, gauss_xall[i], gauss_yall[i])
     gauss_all.append([gauss_xall[i], gauss_yall[i]])
 
 print(gauss_all)
 
-gauss_y1C_predicted = KMeans(n_clusters=1).fit_predict(gauss_all)
+wcss_list = []
+
+gauss_1C_predicted = KMeans(n_clusters=1)
+gauss_1C_predicted.fit_predict(gauss_all)
 print("********** 1 CLUSTER(S) **********")
-print(gauss_y1C_predicted)
+print(gauss_1C_predicted)
+wcss_list.append(gauss_1C_predicted.inertia_)
+print("WCSS: ", gauss_1C_predicted.inertia_)
 
-gauss_y2C_predicted = KMeans(n_clusters=2).fit_predict(gauss_all)
+gauss_2C_predicted = KMeans(n_clusters=2)
+gauss_2C_predicted.fit_predict(gauss_all)
 print("********** 2 CLUSTER(S) **********")
-print(gauss_y2C_predicted)
+print(gauss_2C_predicted)
+wcss_list.append(gauss_2C_predicted.inertia_)
+print("WCSS: ", gauss_2C_predicted.inertia_)
 
-gauss_y3C_predicted = KMeans(n_clusters=3).fit_predict(gauss_all)
+gauss_3C_predicted = KMeans(n_clusters=3)
+gauss_3C_predicted.fit_predict(gauss_all)
 print("********** 3 CLUSTER(S) **********")
-print(gauss_y3C_predicted)
+print(gauss_3C_predicted)
+wcss_list.append(gauss_3C_predicted.inertia_)
+print("WCSS: ", gauss_3C_predicted.inertia_)
 
-gauss_y4C_predicted = KMeans(n_clusters=4).fit_predict(gauss_all)
+gauss_4C_predicted = KMeans(n_clusters=4)
+gauss_4C_predicted.fit_predict(gauss_all)
 print("********** 4 CLUSTER(S) **********")
-print(gauss_y4C_predicted)
+print(gauss_4C_predicted)
+wcss_list.append(gauss_4C_predicted.inertia_)
+print("WCSS: ", gauss_4C_predicted.inertia_)
 
-gauss_y5C_predicted = KMeans(n_clusters=5).fit_predict(gauss_all)
+gauss_5C_predicted = KMeans(n_clusters=5)
+gauss_5C_predicted.fit_predict(gauss_all)
 print("********** 5 CLUSTER(S) **********")
-print(gauss_y5C_predicted)
+print(gauss_5C_predicted)
+wcss_list.append(gauss_5C_predicted.inertia_)
+print("WCSS: ", gauss_5C_predicted.inertia_)
 
-gauss_y6C_predicted = KMeans(n_clusters=6).fit_predict(gauss_all)
+gauss_6C_predicted = KMeans(n_clusters=6)
+gauss_6C_predicted.fit_predict(gauss_all)
 print("********** 6 CLUSTER(S) **********")
-print(gauss_y6C_predicted)
+print(gauss_6C_predicted)
+wcss_list.append(gauss_6C_predicted.inertia_)
+print("WCSS: ", gauss_6C_predicted.inertia_)
 
-gauss_y7C_predicted = KMeans(n_clusters=7).fit_predict(gauss_all)
+gauss_7C_predicted = KMeans(n_clusters=7)
+gauss_7C_predicted.fit_predict(gauss_all)
 print("********** 7 CLUSTER(S) **********")
-print(gauss_y7C_predicted)
+print(gauss_7C_predicted)
+wcss_list.append(gauss_7C_predicted.inertia_)
+print("WCSS: ", gauss_7C_predicted.inertia_)
 
-gauss_y8C_predicted = KMeans(n_clusters=8).fit_predict(gauss_all)
+gauss_8C_predicted = KMeans(n_clusters=8)
+gauss_8C_predicted.fit_predict(gauss_all)
 print("********** 8 CLUSTER(S) **********")
-print(gauss_y8C_predicted)
+print(gauss_8C_predicted)
+wcss_list.append(gauss_8C_predicted.inertia_)
+print("WCSS: ", gauss_8C_predicted.inertia_)
 
-gauss_y9C_predicted = KMeans(n_clusters=9).fit_predict(gauss_all)
+gauss_9C_predicted = KMeans(n_clusters=9)
+gauss_9C_predicted.fit_predict(gauss_all)
 print("********** 9 CLUSTER(S) **********")
-print(gauss_y9C_predicted)
+print(gauss_9C_predicted)
+wcss_list.append(gauss_9C_predicted.inertia_)
+print("WCSS: ", gauss_9C_predicted.inertia_)
+
+print("WCSS: ", wcss_list)
+
+WCSS_Chart = matplotlib.pyplot
+WCSS_Chart.title("WCSS PLOT")
+WCSS_Chart.xlabel("Cluster Number:")
+WCSS_Chart.ylabel("WCSS")
+WCSS_Chart.plot(range(1,len(wcss_list)+1), wcss_list)
+WCSS_Chart.show()
 
 print("CODE ENDS")
