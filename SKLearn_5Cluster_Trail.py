@@ -25,7 +25,7 @@ plt.scatter(gauss_x4, gauss_y4, color='orange')
 gauss_x5 = np.random.normal(loc=10.0, scale=1.0, size=200)
 gauss_y5 = np.random.normal(loc=0.0, scale=1.0, size=200)
 plt.scatter(gauss_x5, gauss_y5, color='pink')
-plt.show()
+# plt.show()
 
 # GENERATE UNCOLORED PLOT
 gauss_xall = np.append(gauss_x1, gauss_x2)
@@ -37,7 +37,7 @@ gauss_yall = np.append(gauss_yall, gauss_y3)
 gauss_yall = np.append(gauss_yall, gauss_y4)
 gauss_yall = np.append(gauss_yall, gauss_y5)
 plt.scatter(gauss_xall, gauss_yall, color='black')
-plt.show()
+# plt.show()
 
 print("GAUSS_XALL")
 print(gauss_xall)
