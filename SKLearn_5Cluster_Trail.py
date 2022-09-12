@@ -1,8 +1,8 @@
 # IMPORT PACKAGES
-import sklearn
-import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
+import numpy as np
+import sklearn
 
 # PRINT PACKAGES VERSION
 print(sklearn.__version__)
@@ -46,7 +46,7 @@ print("")
 print("GAUSS_YALL")
 print(gauss_yall)
 
+print(len(gauss_xall))
+print(len(gauss_yall))
 
-
-from sklearn.cluster import KMeans
-gauss_y_predicted = KMeans(n_clusters=1).fit_predict(gauss_xall)
+# gauss_y_predicted = KMeans(n_clusters=1).fit_predict(gauss_xall)
