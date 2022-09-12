@@ -3,6 +3,7 @@ import sklearn
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
 
 # PRINT PACKAGES VERSION
 print(sklearn.__version__)
@@ -58,3 +59,163 @@ gauss_yall = np.append(gauss_yall, gauss_y8)
 gauss_yall = np.append(gauss_yall, gauss_y9)
 plt.scatter(gauss_xall, gauss_yall, color='black')
 plt.show()
+
+gauss_all = []
+for i in range(0, len(gauss_xall), 1):
+    print(i, gauss_xall[i], gauss_yall[i])
+    gauss_all.append([gauss_xall[i], gauss_yall[i]])
+
+print(gauss_all)
+
+wcss_list = []
+
+gauss_01C_predicted = KMeans(n_clusters=1)
+gauss_01C_predicted.fit_predict(gauss_all)
+print("********** 01 CLUSTER(S) **********")
+print(gauss_01C_predicted)
+wcss_list.append(gauss_01C_predicted.inertia_)
+print("WCSS: ", gauss_01C_predicted.inertia_)
+
+gauss_02C_predicted = KMeans(n_clusters=2)
+gauss_02C_predicted.fit_predict(gauss_all)
+print("********** 02 CLUSTER(S) **********")
+print(gauss_02C_predicted)
+wcss_list.append(gauss_02C_predicted.inertia_)
+print("WCSS: ", gauss_02C_predicted.inertia_)
+
+gauss_03C_predicted = KMeans(n_clusters=3)
+gauss_03C_predicted.fit_predict(gauss_all)
+print("********** 03 CLUSTER(S) **********")
+print(gauss_03C_predicted)
+wcss_list.append(gauss_03C_predicted.inertia_)
+print("WCSS: ", gauss_03C_predicted.inertia_)
+
+gauss_04C_predicted = KMeans(n_clusters=4)
+gauss_04C_predicted.fit_predict(gauss_all)
+print("********** 04 CLUSTER(S) **********")
+print(gauss_04C_predicted)
+wcss_list.append(gauss_04C_predicted.inertia_)
+print("WCSS: ", gauss_04C_predicted.inertia_)
+
+gauss_05C_predicted = KMeans(n_clusters=5)
+gauss_05C_predicted.fit_predict(gauss_all)
+print("********** 05 CLUSTER(S) **********")
+print(gauss_05C_predicted)
+wcss_list.append(gauss_05C_predicted.inertia_)
+print("WCSS: ", gauss_05C_predicted.inertia_)
+
+gauss_06C_predicted = KMeans(n_clusters=6)
+gauss_06C_predicted.fit_predict(gauss_all)
+print("********** 06 CLUSTER(S) **********")
+print(gauss_06C_predicted)
+wcss_list.append(gauss_06C_predicted.inertia_)
+print("WCSS: ", gauss_06C_predicted.inertia_)
+
+gauss_07C_predicted = KMeans(n_clusters=7)
+gauss_07C_predicted.fit_predict(gauss_all)
+print("********** 07 CLUSTER(S) **********")
+print(gauss_07C_predicted)
+wcss_list.append(gauss_07C_predicted.inertia_)
+print("WCSS: ", gauss_07C_predicted.inertia_)
+
+gauss_08C_predicted = KMeans(n_clusters=8)
+gauss_08C_predicted.fit_predict(gauss_all)
+print("********** 08 CLUSTER(S) **********")
+print(gauss_08C_predicted)
+wcss_list.append(gauss_08C_predicted.inertia_)
+print("WCSS: ", gauss_08C_predicted.inertia_)
+
+gauss_09C_predicted = KMeans(n_clusters=9)
+gauss_09C_predicted.fit_predict(gauss_all)
+print("********** 09 CLUSTER(S) **********")
+print(gauss_09C_predicted)
+wcss_list.append(gauss_09C_predicted.inertia_)
+print("WCSS: ", gauss_09C_predicted.inertia_)
+
+gauss_10C_predicted = KMeans(n_clusters=10)
+gauss_10C_predicted.fit_predict(gauss_all)
+print("********** 10 CLUSTER(S) **********")
+print(gauss_10C_predicted)
+wcss_list.append(gauss_10C_predicted.inertia_)
+print("WCSS: ", gauss_10C_predicted.inertia_)
+
+gauss_11C_predicted = KMeans(n_clusters=11)
+gauss_11C_predicted.fit_predict(gauss_all)
+print("********** 11 CLUSTER(S) **********")
+print(gauss_11C_predicted)
+wcss_list.append(gauss_11C_predicted.inertia_)
+print("WCSS: ", gauss_11C_predicted.inertia_)
+
+gauss_12C_predicted = KMeans(n_clusters=12)
+gauss_12C_predicted.fit_predict(gauss_all)
+print("********** 12 CLUSTER(S) **********")
+print(gauss_12C_predicted)
+wcss_list.append(gauss_12C_predicted.inertia_)
+print("WCSS: ", gauss_12C_predicted.inertia_)
+
+gauss_13C_predicted = KMeans(n_clusters=13)
+gauss_13C_predicted.fit_predict(gauss_all)
+print("********** 13 CLUSTER(S) **********")
+print(gauss_13C_predicted)
+wcss_list.append(gauss_13C_predicted.inertia_)
+print("WCSS: ", gauss_13C_predicted.inertia_)
+
+gauss_14C_predicted = KMeans(n_clusters=14)
+gauss_14C_predicted.fit_predict(gauss_all)
+print("********** 14 CLUSTER(S) **********")
+print(gauss_14C_predicted)
+wcss_list.append(gauss_14C_predicted.inertia_)
+print("WCSS: ", gauss_14C_predicted.inertia_)
+
+gauss_15C_predicted = KMeans(n_clusters=15)
+gauss_15C_predicted.fit_predict(gauss_all)
+print("********** 15 CLUSTER(S) **********")
+print(gauss_15C_predicted)
+wcss_list.append(gauss_15C_predicted.inertia_)
+print("WCSS: ", gauss_15C_predicted.inertia_)
+
+gauss_16C_predicted = KMeans(n_clusters=16)
+gauss_16C_predicted.fit_predict(gauss_all)
+print("********** 16 CLUSTER(S) **********")
+print(gauss_16C_predicted)
+wcss_list.append(gauss_16C_predicted.inertia_)
+print("WCSS: ", gauss_16C_predicted.inertia_)
+
+gauss_17C_predicted = KMeans(n_clusters=17)
+gauss_17C_predicted.fit_predict(gauss_all)
+print("********** 17 CLUSTER(S) **********")
+print(gauss_17C_predicted)
+wcss_list.append(gauss_17C_predicted.inertia_)
+print("WCSS: ", gauss_17C_predicted.inertia_)
+
+gauss_18C_predicted = KMeans(n_clusters=18)
+gauss_18C_predicted.fit_predict(gauss_all)
+print("********** 18 CLUSTER(S) **********")
+print(gauss_18C_predicted)
+wcss_list.append(gauss_18C_predicted.inertia_)
+print("WCSS: ", gauss_18C_predicted.inertia_)
+
+gauss_19C_predicted = KMeans(n_clusters=19)
+gauss_19C_predicted.fit_predict(gauss_all)
+print("********** 19 CLUSTER(S) **********")
+print(gauss_19C_predicted)
+wcss_list.append(gauss_19C_predicted.inertia_)
+print("WCSS: ", gauss_19C_predicted.inertia_)
+
+gauss_20C_predicted = KMeans(n_clusters=20)
+gauss_20C_predicted.fit_predict(gauss_all)
+print("********** 20 CLUSTER(S) **********")
+print(gauss_20C_predicted)
+wcss_list.append(gauss_20C_predicted.inertia_)
+print("WCSS: ", gauss_20C_predicted.inertia_)
+
+print("WCSS: ", wcss_list)
+
+WCSS_Chart = matplotlib.pyplot
+WCSS_Chart.title("WCSS PLOT")
+WCSS_Chart.xlabel("Cluster Number:")
+WCSS_Chart.ylabel("WCSS")
+WCSS_Chart.plot(range(1,len(wcss_list)+1), wcss_list)
+WCSS_Chart.show()
+
+print("CODE ENDS")
