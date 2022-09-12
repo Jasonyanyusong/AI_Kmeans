@@ -51,4 +51,12 @@ print(gauss_yall)
 print(len(gauss_xall))
 print(len(gauss_yall))
 
+gauss_all = []
+for i in range (0, len(gauss_xall), 1):
+    # gauss_all += np.array([gauss_xall[i],gauss_yall[i]])
+    print(i, gauss_xall[i], gauss_yall[i])
+    gauss_all.append([gauss_xall[i], gauss_yall[i]])
+
+print(gauss_all)
+
 # gauss_y_predicted = KMeans(n_clusters=1).fit_predict(gauss_xall)
