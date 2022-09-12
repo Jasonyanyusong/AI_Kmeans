@@ -68,7 +68,7 @@ for i in range(0, len(gauss_xall), 1):
 print(gauss_all)
 
 silhouette_score_list = []
-for i in range(2, len(gauss_xall)+1):
+for i in range(2, len(gauss_xall) + 1):
     gauss_i_predicted = KMeans(n_clusters=i)
     gauss_i_predicted.fit_predict(gauss_all)
     print("********** ", i, " CLUSTER(S) **********")
@@ -81,7 +81,7 @@ WCSS_Chart = matplotlib.pyplot
 WCSS_Chart.title("Silhouette Score Plot")
 WCSS_Chart.xlabel("Cluster Number:")
 WCSS_Chart.ylabel("Silhouette Score:")
-WCSS_Chart.plot(range(1,len(silhouette_score_list)+1), silhouette_score_list)
+WCSS_Chart.plot(range(1, len(silhouette_score_list) + 1), silhouette_score_list)
 WCSS_Chart.show()
 
 print("CODE ENDS")

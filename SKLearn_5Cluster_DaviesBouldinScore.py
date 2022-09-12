@@ -72,7 +72,7 @@ print("Davies Bouldin Score: ", davies_bouldin_score_list)
 WCSS_Chart = matplotlib.pyplot
 WCSS_Chart.title("Davies Bouldin Score Plot")
 WCSS_Chart.xlabel("Cluster Number:")
-WCSS_Chart.ylabel("Davies Bouldin Score")
+WCSS_Chart.ylabel("Davies Bouldin Score:")
 WCSS_Chart.plot(range(1, len(davies_bouldin_score_list) + 1), davies_bouldin_score_list)
 WCSS_Chart.show()
 

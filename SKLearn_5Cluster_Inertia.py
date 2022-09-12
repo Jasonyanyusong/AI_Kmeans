@@ -58,21 +58,21 @@ for i in range(0, len(gauss_xall), 1):
     gauss_all.append([gauss_xall[i], gauss_yall[i]])
 print(gauss_all)
 
-wcss_list = []
-for i in range(1,len(gauss_xall)+1):
+inertia_list = []
+for i in range(1, len(gauss_xall) + 1):
     gauss_i_predicted = KMeans(n_clusters=i)
     gauss_i_predicted.fit_predict(gauss_all)
     print("********** ", i, " CLUSTER(S) **********")
     print(gauss_i_predicted)
-    wcss_list.append(gauss_i_predicted.inertia_)
-    print("WCSS: ", gauss_i_predicted.inertia_)
-print("WCSS: ", wcss_list)
+    inertia_list.append(gauss_i_predicted.inertia_)
+    print("Inertia: ", gauss_i_predicted.inertia_)
+print("Inertia: ", inertia_list)
 
 WCSS_Chart = matplotlib.pyplot
-WCSS_Chart.title("WCSS PLOT")
+WCSS_Chart.title("Inertia Plot")
 WCSS_Chart.xlabel("Cluster Number:")
-WCSS_Chart.ylabel("WCSS")
-WCSS_Chart.plot(range(1,len(wcss_list)+1), wcss_list)
+WCSS_Chart.ylabel("Inertia:")
+WCSS_Chart.plot(range(1, len(inertia_list) + 1), inertia_list)
 WCSS_Chart.show()
 
 print("CODE ENDS")
