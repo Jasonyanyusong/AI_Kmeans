@@ -53,7 +53,7 @@ print(len(gauss_xall))
 print(len(gauss_yall))
 
 gauss_all = []
-for i in range (0, len(gauss_xall), 1):
+for i in range(0, len(gauss_xall), 1):
     # gauss_all += np.array([gauss_xall[i],gauss_yall[i]])
     print(i, gauss_xall[i], gauss_yall[i])
     gauss_all.append([gauss_xall[i], gauss_yall[i]])
@@ -61,25 +61,39 @@ for i in range (0, len(gauss_xall), 1):
 print(gauss_all)
 
 gauss_y1C_predicted = KMeans(n_clusters=1).fit_predict(gauss_all)
+print("********** 1 CLUSTER(S) **********")
 print(gauss_y1C_predicted)
 
 gauss_y2C_predicted = KMeans(n_clusters=2).fit_predict(gauss_all)
+print("********** 2 CLUSTER(S) **********")
 print(gauss_y2C_predicted)
 
 gauss_y3C_predicted = KMeans(n_clusters=3).fit_predict(gauss_all)
+print("********** 3 CLUSTER(S) **********")
 print(gauss_y3C_predicted)
 
 gauss_y4C_predicted = KMeans(n_clusters=4).fit_predict(gauss_all)
+print("********** 4 CLUSTER(S) **********")
 print(gauss_y4C_predicted)
 
 gauss_y5C_predicted = KMeans(n_clusters=5).fit_predict(gauss_all)
+print("********** 5 CLUSTER(S) **********")
 print(gauss_y5C_predicted)
 
 gauss_y6C_predicted = KMeans(n_clusters=6).fit_predict(gauss_all)
+print("********** 6 CLUSTER(S) **********")
 print(gauss_y6C_predicted)
 
 gauss_y7C_predicted = KMeans(n_clusters=7).fit_predict(gauss_all)
+print("********** 7 CLUSTER(S) **********")
 print(gauss_y7C_predicted)
 
 gauss_y8C_predicted = KMeans(n_clusters=8).fit_predict(gauss_all)
+print("********** 8 CLUSTER(S) **********")
 print(gauss_y8C_predicted)
+
+gauss_y9C_predicted = KMeans(n_clusters=9).fit_predict(gauss_all)
+print("********** 9 CLUSTER(S) **********")
+print(gauss_y9C_predicted)
+
+print("CODE ENDS")
