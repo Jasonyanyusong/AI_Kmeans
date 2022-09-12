@@ -68,7 +68,7 @@ for i in range(0, len(gauss_xall), 1):
 print(gauss_all)
 
 calinsk_harabasz_index_list = []
-for i in range(1, len(gauss_xall)+1):
+for i in range(2, len(gauss_xall)):
     gauss_i_predicted = KMeans(n_clusters=i)
     gauss_i_predicted.fit_predict(gauss_all)
     print("********** ", i, " CLUSTER(S) **********")
