@@ -39,9 +39,14 @@ gauss_yall = np.append(gauss_yall, gauss_y5)
 plt.scatter(gauss_xall, gauss_yall, color='black')
 plt.show()
 
+print("GAUSS_XALL")
 print(gauss_xall)
+
 print("")
+print("GAUSS_YALL")
 print(gauss_yall)
 
-from sklearn.neighbors import NearestNeighbors
-from sklearn.neighbors import KNeighborsClassifier
+
+
+from sklearn.cluster import KMeans
+gauss_y_predicted = KMeans(n_clusters=1).fit_predict(gauss_xall)
