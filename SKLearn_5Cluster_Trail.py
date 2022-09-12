@@ -3,6 +3,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 import sklearn
+from sklearn.cluster import KMeans
 
 # PRINT PACKAGES VERSION
 print(sklearn.__version__)
@@ -59,4 +60,26 @@ for i in range (0, len(gauss_xall), 1):
 
 print(gauss_all)
 
-# gauss_y_predicted = KMeans(n_clusters=1).fit_predict(gauss_xall)
+gauss_y1C_predicted = KMeans(n_clusters=1).fit_predict(gauss_all)
+print(gauss_y1C_predicted)
+
+gauss_y2C_predicted = KMeans(n_clusters=2).fit_predict(gauss_all)
+print(gauss_y2C_predicted)
+
+gauss_y3C_predicted = KMeans(n_clusters=3).fit_predict(gauss_all)
+print(gauss_y3C_predicted)
+
+gauss_y4C_predicted = KMeans(n_clusters=4).fit_predict(gauss_all)
+print(gauss_y4C_predicted)
+
+gauss_y5C_predicted = KMeans(n_clusters=5).fit_predict(gauss_all)
+print(gauss_y5C_predicted)
+
+gauss_y6C_predicted = KMeans(n_clusters=6).fit_predict(gauss_all)
+print(gauss_y6C_predicted)
+
+gauss_y7C_predicted = KMeans(n_clusters=7).fit_predict(gauss_all)
+print(gauss_y7C_predicted)
+
+gauss_y8C_predicted = KMeans(n_clusters=8).fit_predict(gauss_all)
+print(gauss_y8C_predicted)
