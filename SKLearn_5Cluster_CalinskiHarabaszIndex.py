@@ -5,6 +5,7 @@ import numpy as np
 import sklearn
 from sklearn.cluster import KMeans
 from sklearn import metrics
+
 # PRINT PACKAGES VERSION
 print(sklearn.__version__)
 print(np.__version__)
@@ -58,21 +59,21 @@ for i in range(0, len(gauss_xall), 1):
     gauss_all.append([gauss_xall[i], gauss_yall[i]])
 print(gauss_all)
 
-silhouette_score_list = []
-for i in range(2, len(gauss_xall)+1):
+calinsk_harabasz_index_list = []
+for i in range(1, len(gauss_xall)+1):
     gauss_i_predicted = KMeans(n_clusters=i)
     gauss_i_predicted.fit_predict(gauss_all)
     print("********** ", i, " CLUSTER(S) **********")
     print(gauss_i_predicted)
-    silhouette_score_list.append(metrics.silhouette_score(gauss_all, gauss_i_predicted.labels_, metric='euclidean'))
-    print("Silhouette Score: ", metrics.silhouette_score(gauss_all, gauss_i_predicted.labels_, metric='euclidean'))
-print("Silhouette Score: ", silhouette_score_list)
+    calinsk_harabasz_index_list.append(metrics.calinski_harabasz_score(gauss_all, gauss_i_predicted.labels_))
+    print("Calinsk Harabasz Index: ", metrics.calinski_harabasz_score(gauss_all, gauss_i_predicted.labels_))
+print("Calinsk Harabasz Index: ", calinsk_harabasz_index_list)
 
 WCSS_Chart = matplotlib.pyplot
-WCSS_Chart.title("Silhouette Score Plot")
+WCSS_Chart.title("Calinsk Harabasz Index Plot")
 WCSS_Chart.xlabel("Cluster Number:")
-WCSS_Chart.ylabel("Silhouette Score:")
-WCSS_Chart.plot(range(1,len(silhouette_score_list)+1), silhouette_score_list)
+WCSS_Chart.ylabel("Calinsk Harabasz Index:")
+WCSS_Chart.plot(range(1, len(calinsk_harabasz_index_list)+1), calinsk_harabasz_index_list)
 WCSS_Chart.show()
 
 print("CODE ENDS")
