@@ -59,3 +59,4 @@ gauss_yall = np.append(gauss_yall, gauss_y9)
 
 plt.scatter(gauss_xall, gauss_yall, color='black')
 plt.show()
+
