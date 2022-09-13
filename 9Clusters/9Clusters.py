@@ -85,36 +85,43 @@ for i in range(2, len(gauss_xall)):
     silhouette_score_list.append(metrics.silhouette_score(gauss_all, gauss_i_predicted.labels_, metric='euclidean'))
     print("Silhouette Score: ", metrics.silhouette_score(gauss_all, gauss_i_predicted.labels_, metric='euclidean'))
 print("Inertia: ", inertia_list)
+print("Inertia Length: ", len(inertia_list))
+
 print("Calinsk Harabasz Index: ", calinsk_harabasz_index_list)
+print("Calinsk Harabasz Index Length: ", len(calinsk_harabasz_index_list))
+
 print("Davies Bouldin Score: ", davies_bouldin_score_list)
+print("Davies Bouldin Score Length: ", len(davies_bouldin_score_list))
+
 print("Silhouette Score: ", silhouette_score_list)
+print("Silhouette Score Length: ", len(silhouette_score_list))
 
 Inertia_Chart = matplotlib.pyplot
 Inertia_Chart.title("Inertia Plot")
 Inertia_Chart.xlabel("Cluster Number:")
 Inertia_Chart.ylabel("Inertia:")
-Inertia_Chart.plot(range(2, len(inertia_list)), inertia_list)
+Inertia_Chart.plot(range(2, len(inertia_list) + 2), inertia_list)
 Inertia_Chart.show()
 
 Calinsk_Harabasz_Index_Chart = matplotlib.pyplot
 Calinsk_Harabasz_Index_Chart.title("Calinsk Harabasz Index Plot")
 Calinsk_Harabasz_Index_Chart.xlabel("Cluster Number:")
 Calinsk_Harabasz_Index_Chart.ylabel("Calinsk Harabasz Index:")
-Calinsk_Harabasz_Index_Chart.plot(range(2, len(calinsk_harabasz_index_list)), calinsk_harabasz_index_list)
+Calinsk_Harabasz_Index_Chart.plot(range(2, len(calinsk_harabasz_index_list) + 2), calinsk_harabasz_index_list)
 Calinsk_Harabasz_Index_Chart.show()
 
 Davies_Bouldin_Score_Chart = matplotlib.pyplot
 Davies_Bouldin_Score_Chart.title("Davies Bouldin Score Plot")
 Davies_Bouldin_Score_Chart.xlabel("Cluster Number:")
 Davies_Bouldin_Score_Chart.ylabel("Davies Bouldin Score:")
-Davies_Bouldin_Score_Chart.plot(range(2, len(davies_bouldin_score_list)), davies_bouldin_score_list)
+Davies_Bouldin_Score_Chart.plot(range(2, len(davies_bouldin_score_list) + 2), davies_bouldin_score_list)
 Davies_Bouldin_Score_Chart.show()
 
 Silhouette_Score_Chart = matplotlib.pyplot
 Silhouette_Score_Chart.title("Silhouette Score Plot")
 Silhouette_Score_Chart.xlabel("Cluster Number:")
 Silhouette_Score_Chart.ylabel("Silhouette Score Score:")
-Silhouette_Score_Chart.plot(range(2, len(silhouette_score_list)), silhouette_score_list)
+Silhouette_Score_Chart.plot(range(2, len(silhouette_score_list) + 2), silhouette_score_list)
 Silhouette_Score_Chart.show()
 
 print("CODE ENDS")
