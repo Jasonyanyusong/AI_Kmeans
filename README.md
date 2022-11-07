@@ -1,3 +1,3 @@
 # AI_Kmeans
 
-There is several problems in K means algorithm currently
+I would like to propose a refined K means evaluate criteria.
